@@ -1,0 +1,36 @@
+
+
+.row{
+    max-width: $grid-width;
+    margin: 0 auto;
+    margin-bottom: $gutter-vertical;
+
+   &::after{
+   @include fix;
+   }
+   [class^="col"]{
+    float: left;
+    &:not(:last-child){
+        margin-right: calc(#{$gutter-horizontal} );
+     }
+   }
+
+   .col1-of-2{
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+
+}
+   .col-major{
+        width:calc((100% - #{$gutter-horizontal})*40%) ;
+        float: left;
+        &:last-child{
+            width:calc((100% - #{$gutter-horizontal})*60%);  
+        }
+    }
+    .col-minor{
+        width:calc((100% - #{$gutter-horizontal})*60%) ;
+        float: left;
+        &:last-child{
+            width:calc((100% - #{$gutter-horizontal})*40%);  
+        }
+    }
+}

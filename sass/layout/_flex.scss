@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 100vh;
+    .forward{
+      @include flex(35%,55%,10%);
+    }
+    .backward{
+        @include flex(55%,40%,5%);  
+    }
+    .half{
+      @include flex(40%,50%,10%);
+    }
+}

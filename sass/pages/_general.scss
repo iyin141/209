@@ -1,0 +1,76 @@
+.flex{
+    padding-top: 3rem;
+    .forward{
+        &__img img{
+            width: 50rem;
+        }
+        &__text{
+            width: 100%;
+            a{
+                @include purple-link(5rem);
+            }
+          }
+    }   
+    .backward{
+        padding-top: 3rem;
+        padding-left: 3rem;
+        &__img img{
+            width: 50rem;
+        }
+        &__img2 img{
+            width:50rem;
+        }
+        &__text{
+            max-width: 100%;
+          }
+    }  
+
+    .half{
+        &__text{
+            padding: 10rem;
+            text-align: center;
+        }
+        form{
+            background-color: rgba(32, 32, 39, 1);
+            width: fit-content;
+            padding: 4rem;
+            margin-top: -1.5rem;
+            input,textarea,button{
+                width:43rem;
+                height: 3rem;
+                background-color:rgb(37, 37, 50) ;
+                border: 1.5px solid rgba(80, 101, 178, 1);
+                border-radius: 2px; 
+                margin-top: 2rem; 
+                color: white;        
+            }
+            button{
+                background-color: $light-purple;
+                font-size: 2.5rem;
+                font-style: $base;
+            }
+            .send{
+                input{
+                    @include purple-link(5rem);
+                    border-radius: 2px;
+                    padding-top: 1rem;
+                    padding-bottom: 3rem;
+                    letter-spacing:3px;
+                    margin-top: 2.5rem;
+                }
+            }
+        }
+    }
+    
+}
+.display{
+    justify-content: space-around;
+    padding: 5rem;
+    h5{
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    h6{
+        padding-bottom: 2rem;
+    }
+}

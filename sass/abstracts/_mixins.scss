@@ -1,0 +1,28 @@
+@mixin fix{
+    content: "";
+    display: table;
+    clear: both;
+}
+@mixin purple-link($padding-left: 5rem){
+    text-decoration: none;
+    font-family: $base;
+    font-weight: 400;
+    font-size: 2rem;
+    color: $white;
+    background-color:$purple;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: $padding-left;
+    padding-right: $padding-left;
+    text-align: center;
+    border-radius: 10px;
+}
+@mixin flex($first-max-width: 35%, $last-max-width: 55%, $margin-right: 5%) {
+    max-width: $first-max-width;
+    &:last-child {
+        max-width: $last-max-width;
+    }
+    &:not(:last-child) {
+        margin-right: $margin-right;
+    }
+}
